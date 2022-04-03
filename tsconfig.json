@@ -1,3 +1,24 @@
 {
-	"extends": "./.svelte-kit/tsconfig.json"
+  "extends": "./.svelte-kit/tsconfig.json",
+  "include": ["src/**/*", "jestSetup.ts"],
+  "exclude": ["node_modules/*", "dist"],
+  "compilerOptions": {
+    "outDir": "build",
+    "resolveJsonModule": true,
+    "lib": ["DOM", "ES2017", "WebWorker"],
+    "esModuleInterop": true,
+    "importsNotUsedAsValues": "remove",
+    "strict": true,
+    "baseUrl": "./src",
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "skipLibCheck": true,
+    "noEmitHelpers": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "moduleResolution": "node"
+  }
 }
