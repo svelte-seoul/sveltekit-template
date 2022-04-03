@@ -1,9 +1,6 @@
 {
   "extends": "./.svelte-kit/tsconfig.json",
-  "include": [
-    "src/**/*",
-    "jestSetup.ts"
-  ],
+  "include": ["src/**/*", "jestSetup.ts"],
   "exclude": ["node_modules/*", "dist"],
   "compilerOptions": {
     "outDir": "build",
