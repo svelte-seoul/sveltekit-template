@@ -1,0 +1,6 @@
+{
+  "title": "Intro",
+  "goto-link": "Go to <a href=\"{{link}}\">{{name}}</a>",
+  "sign-in": "Sign In",
+  "temp": "Temp"
+}

@@ -1,0 +1,6 @@
+{
+  "title": "소개",
+  "goto-link": "<a href=\"{{link}}\">{{name}}</a>로 가기",
+  "sign-in": "로그인",
+  "temp-page": "임시 페이지"
+}
