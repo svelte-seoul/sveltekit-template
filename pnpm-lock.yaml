@@ -4,6 +4,7 @@ specifiers:
   '@playwright/test': ^1.20.0
   '@sveltejs/adapter-auto': next
   '@sveltejs/kit': next
+  '@types/postcss-preset-env': ^6.7.3
   '@typescript-eslint/eslint-plugin': ^5.10.1
   '@typescript-eslint/parser': ^5.10.1
   autoprefixer: ^10.4.2
@@ -31,6 +32,7 @@ devDependencies:
   '@playwright/test': 1.20.2
   '@sveltejs/adapter-auto': 1.0.0-next.34
   '@sveltejs/kit': 1.0.0-next.304_svelte@3.46.6
+  '@types/postcss-preset-env': 6.7.3
   '@typescript-eslint/eslint-plugin': 5.17.0_6da5f837f6da21a8347f2aaca31a901b
   '@typescript-eslint/parser': 5.17.0_eslint@7.32.0+typescript@4.6.3
   autoprefixer: 10.4.4_postcss@8.4.12
@@ -875,6 +877,20 @@ packages:
     engines: {node: '>=10.13.0'}
     dev: true
 
+  /@types/autoprefixer/9.7.2:
+    resolution: {integrity: sha512-QX7U7YW3zX3ex6MECtWO9folTGsXeP4b8bSjTq3I1ODM+H+sFHwGKuof+T+qBcDClGlCGtDb3SVfiTVfmcxw4g==}
+    dependencies:
+      '@types/browserslist': 4.15.0
+      postcss: 7.0.39
+    dev: true
+
+  /@types/browserslist/4.15.0:
+    resolution: {integrity: sha512-h9LyKErRGZqMsHh9bd+FE8yCIal4S0DxKTOeui56VgVXqa66TKiuaIUxCAI7c1O0LjaUzOTcsMyOpO9GetozRA==}
+    deprecated: This is a stub types definition. browserslist provides its own type definitions, so you do not need this installed.
+    dependencies:
+      browserslist: 4.20.2
+    dev: true
+
   /@types/istanbul-lib-coverage/2.0.4:
     resolution: {integrity: sha512-z/QT1XN4K4KYuslS23k62yDIDLwLFkzxOuMplDtObz0+y7VqJCaO2o+SPwHCvLFZh7xazvvoor2tA/hPz9ee7g==}
     dev: true
@@ -897,6 +913,13 @@ packages:
 
   /@types/node/17.0.23:
     resolution: {integrity: sha512-UxDxWn7dl97rKVeVS61vErvw086aCYhDLyvRQZ5Rk65rZKepaFdm53GeqXaKBuOhED4e9uWq34IC3TdSdJJ2Gw==}
+    dev: true
+
+  /@types/postcss-preset-env/6.7.3:
+    resolution: {integrity: sha512-3YS66Cd7yNTOjjIPoOUaeGbcnxH+0eeP8Ih/RLpFEDazK16lOTabMqmHfL76DBNj5LreJlKRtKML07JkkuxRyw==}
+    dependencies:
+      '@types/autoprefixer': 9.7.2
+      postcss: 7.0.39
     dev: true
 
   /@types/pug/2.0.6:
@@ -2610,6 +2633,10 @@ packages:
     resolution: {integrity: sha1-elfrVQpng/kRUzH89GY9XI4AelA=}
     dev: true
 
+  /picocolors/0.2.1:
+    resolution: {integrity: sha512-cMlDqaLEqfSaW8Z7N5Jw+lyIW869EzT73/F5lhtY9cLGoVxSXznfgfXMO0Z5K0o0Q2TkTXq+0KFsdnSe3jDViA==}
+    dev: true
+
   /picocolors/1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
     dev: true
@@ -3319,6 +3346,14 @@ packages:
 
   /postcss-value-parser/4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
+    dev: true
+
+  /postcss/7.0.39:
+    resolution: {integrity: sha512-yioayjNbHn6z1/Bywyb2Y4s3yvDAeXGOyxqD+LnVOinq6Mdmd++SW2wUNVzavyyHxd6+DxzWGIuosg6P1Rj8uA==}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      picocolors: 0.2.1
+      source-map: 0.6.1
     dev: true
 
   /postcss/8.4.12:

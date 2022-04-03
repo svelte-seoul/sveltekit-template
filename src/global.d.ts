@@ -1,6 +1,6 @@
 /// <reference types="svelte" />
 
 declare module '*.svg' {
-  const content: any;
+  const content: string | null | undefined;
   export default content;
 }
