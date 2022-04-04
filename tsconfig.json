@@ -1,15 +1,17 @@
 {
   "extends": "./.svelte-kit/tsconfig.json",
-  "include": ["src/**/*", "jestSetup.ts"],
+  "include": ["src/**/*", "src/**/*.svelte", "src/**/*.js"],
   "exclude": ["node_modules/*", "dist"],
   "compilerOptions": {
     "outDir": "build",
     "resolveJsonModule": true,
+    "isolatedModules": true,
+    "target": "es2020",
     "lib": ["DOM", "ES2017", "WebWorker"],
     "esModuleInterop": true,
     "importsNotUsedAsValues": "remove",
     "strict": true,
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "experimentalDecorators": true,
@@ -19,6 +21,10 @@
     "noEmitHelpers": true,
     "noImplicitReturns": true,
     "noUnusedLocals": false,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "paths": {
+      "$lib": ["src/lib"],
+      "$lib/*": ["src/lib/*"],
+    },
   }
 }

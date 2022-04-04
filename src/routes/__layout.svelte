@@ -24,19 +24,12 @@
       max-width: none;
     }
   }
-
-  .container {
-    justify-self: center;
-    width: 30%;
-    color: var(--text);
-  }
 </style>
 
 <script context="module" lang="ts">
   import {t, locale, locales, loadTranslations} from '$lib/translations';
 
-  /** @type {import('@sveltejs/kit').Load} */
-  export const load = async ({url}) => {
+  export const load: Load = async ({url}) => {
     const {pathname} = url;
     const defaultLocale = 'en'; // get from cookie / user session etc...
     const initLocale = locale.get() || defaultLocale;
@@ -49,6 +42,7 @@
   import '../app.css';
   import {ThemeProvider} from 'sveltekit-theme';
   import {light, dark} from '../utils/theme';
+  import type {Load} from '@sveltejs/kit';
 </script>
 
 <ThemeProvider customTheme={{light, dark}}>
