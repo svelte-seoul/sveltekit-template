@@ -1,7 +1,7 @@
 <script lang="ts">
   import {t} from '$lib/translations';
-  import type {ThemeStore} from 'sveltekit-theme';
-  import {getContext, onMount} from 'svelte';
+  import {type ThemeStore} from 'sveltekit-theme';
+  import {getContext} from 'svelte';
   import {browser} from '$app/env';
 
   const {changeThemeType} = getContext<ThemeStore>('svelte-theme');
@@ -16,14 +16,6 @@
   };
 
   toggleTheme();
-
-  const x = '$app/env';
-  onMount(async () => {
-    console.log('onMount');
-    const appEnv = await import(x);
-
-    console.log('appEnv', appEnv);
-  });
 </script>
 
 <div class="container">

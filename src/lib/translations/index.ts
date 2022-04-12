@@ -1,8 +1,8 @@
-import i18n from 'sveltekit-i18n';
+import i18n, { type Config } from 'sveltekit-i18n';
 import lang from './langs.json';
 
-/** @type {import('sveltekit-i18n').Config} */
-const config = {
+const config: Config = {
+  initLocale: 'en',
   translations: {
     en: {lang},
     ko: {lang},
@@ -31,4 +31,4 @@ const config = {
   ],
 };
 
-export const {t, locale, locales, loading, loadTranslations} = new i18n(config);
+export const {t, locale, locales, loading, loadTranslations} = new i18n<[Record<string, unknown>?, Record<string, unknown>?]>(config);

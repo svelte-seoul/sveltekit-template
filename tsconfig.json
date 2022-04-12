@@ -1,6 +1,6 @@
 {
   "extends": "./.svelte-kit/tsconfig.json",
-  "include": ["src/**/*", "jestSetup.ts"],
+  "include": ["src/**/*", "postcss.config.cjs", ".eslintrc.cjs", ".prettier.cjs", "svelte.config.js"],
   "exclude": ["node_modules/*", "dist"],
   "compilerOptions": {
     "outDir": "build",
@@ -9,9 +9,10 @@
     "esModuleInterop": true,
     "importsNotUsedAsValues": "remove",
     "strict": true,
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
+    "checkJs": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
@@ -19,6 +20,12 @@
     "noEmitHelpers": true,
     "noImplicitReturns": true,
     "noUnusedLocals": false,
-    "moduleResolution": "node"
-  }
+    "moduleResolution": "node",
+		"paths": {
+			"$lib": ["src/lib"],
+			"$lib/*": ["src/lib/*"]
+		},
+    "typeRoots": ["./@types", "node_modules/@types"]
+  },
+  "files": ["env.d.ts", "environment.d.ts"]
 }
