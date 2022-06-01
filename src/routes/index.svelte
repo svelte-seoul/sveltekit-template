@@ -8,11 +8,11 @@
 
   const toggleTheme = () => {
     if (browser)
-      document.addEventListener('keydown', (event) => {
+      {document.addEventListener('keydown', (event) => {
         if (event.ctrlKey && event.key === '.') {
           changeThemeType();
         }
-      });
+      });}
   };
 
   toggleTheme();

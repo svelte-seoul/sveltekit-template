@@ -1,5 +1,5 @@
-import svgLock from '../../static/svgs/lock.svg';
-import svgLogo from '../../static/svgs/logo.svg';
-import svgMail from '../../static/svgs/mail.svg';
+import svgLock from '$lib/svgs/lock.svg';
+import svgLogo from '$lib/svgs/logo.svg';
+import svgMail from '$lib/svgs/mail.svg';
 
 export {svgLogo, svgMail, svgLock};

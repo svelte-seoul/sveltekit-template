@@ -20,7 +20,7 @@
   }
 
   .icon {
-    margin-left: 12px;
+    margin: 0 12px;
     width: 24px;
     filter: invert(0.5);
   }

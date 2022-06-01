@@ -1,4 +1,4 @@
-import i18n, { type Config } from 'sveltekit-i18n';
+import i18n, {type Config} from 'sveltekit-i18n';
 import lang from './langs.json';
 
 const config: Config = {

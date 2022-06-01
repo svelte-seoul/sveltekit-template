@@ -46,11 +46,11 @@
   export let containerStyle = '';
   export let inputStyle = '';
 
-  export let value = '';
+  export let value: string | number = '';
 
   const dispatch = createEventDispatcher();
 
-  const onChanged = (e) => {
+  const onChanged = (e: any) => {
     value = /^(number|range)$/.exec(type) ? +e.target.value : e.target.value;
 
     dispatch('changed', value);
