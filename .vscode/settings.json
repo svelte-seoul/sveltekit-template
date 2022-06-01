@@ -11,7 +11,7 @@
   },
   "javascript.preferences.importModuleSpecifier": "relative",
   "typescript.preferences.importModuleSpecifier": "relative",
-  "prettier.configPath": ".prettierrc.js",
+  "prettier.configPath": ".prettierrc",
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode"
   },
