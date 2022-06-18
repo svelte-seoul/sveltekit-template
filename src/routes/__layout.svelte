@@ -45,15 +45,19 @@
   import {ThemeProvider} from 'sveltekit-theme';
   import {light, dark} from '../utils/theme';
   import type {Load} from '@sveltejs/kit';
+
+  const isProduction = process.env.NODE_ENV;
 </script>
 
 <ThemeProvider customTheme={{light, dark}}>
   <div class="menu">
-    <select bind:value={$locale}>
-      {#each $locales as value}
-        <option value={value}>{$t(`lang.${value}`)}</option>
-      {/each}
-    </select>
+    {#if isProduction !== 'production'}
+      <select bind:value={$locale}>
+        {#each $locales as value}
+          <option value={value}>{$t(`lang.${value}`)}</option>
+        {/each}
+      </select>
+    {/if}
   </div>
   <main>
     <slot />
