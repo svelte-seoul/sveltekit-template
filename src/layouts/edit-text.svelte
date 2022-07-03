@@ -3,9 +3,9 @@
     border: 1px solid var(--border) !important;
     box-sizing: border-box;
     border-radius: 4px;
-    height: 50px;
 
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
 
@@ -13,13 +13,12 @@
       border: 1px solid var(--input-focus);
     }
 
-    input {
+    input, textarea {
       flex: 1;
-      height: 100%;
       color: var(--text);
       caret-color: var(--text);
       text-transform: none;
-      font-size: var(--font-size, 14px);
+      font-size: var(--font-size, 0.875rem);
       padding: 12px 16px;
       font-family: inherit;
       background-color: transparent;
@@ -27,7 +26,7 @@
       border: none;
 
       &:focus {
-        outline: none;
+        outline: 2px solid var(--focus);
       }
 
       &:-webkit-autofill {
@@ -45,6 +44,7 @@
   export let type = 'text';
   export let containerStyle = '';
   export let inputStyle = '';
+  export let numOfLines = 1;
 
   export let value: string | number = '';
 
@@ -59,11 +59,21 @@
 
 <div class="container" style={containerStyle}>
   <slot name="leftElement" />
-  <input
-    style={inputStyle}
-    type={type}
-    placeholder={placeholder}
-    on:input={onChanged}
-  />
+  {#if numOfLines === 1}
+    <input
+      style={inputStyle}
+      type={type}
+      placeholder={placeholder}
+      on:input={onChanged}
+    />
+  {:else}
+    <textarea
+      rows={numOfLines}
+      style={inputStyle}
+      type={type}
+      placeholder={placeholder}
+      on:input={onChanged}
+    />
+  {/if}
   <slot name="rightElement" />
 </div>
